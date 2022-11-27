@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  yocto-build:
+    image: yocto-mini:latest
+    volumes:
+      - ./build-files/poky:/home/poky
+      - ./build-files/build-dir:/home/build
+      - ./build-files/downloads:/home/downloads
+    environment:
+      - GIT_USERNAME
+      - GIT_PASSWORD
+      - GIT_NAME
+      - GIT_EMAIL
+      - USE_PROXY
+      - UNAME_WRAP
+      - YOCTO_BUILD_PARALLEL
+      - NO_CONF_RESET

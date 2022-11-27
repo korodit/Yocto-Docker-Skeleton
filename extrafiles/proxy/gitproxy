@@ -1,0 +1,3 @@
+#!/bin/bash
+# nc -x http://placeholder_proxy.domain:8080 $1 $2
+$1 $2
